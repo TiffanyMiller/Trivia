@@ -7,8 +7,17 @@ public class Decks : MonoBehaviour {
     public GameObject[] blueDeck, greenDeck, redDeck, yellowDeck, purpleDeck;
     public static GameObject blueCard, greenCard, redCard, yellowCard, purpleCard;
 
+    public static string result;
+    public string isCorrect;
+
+    private void Update()
+    {
+        isCorrect = result;
+    }
+
     private void Start()
     {
+        result = "incorrect";
         SelectRandom();
     }
 
